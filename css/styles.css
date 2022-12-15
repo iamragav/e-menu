@@ -1,0 +1,62 @@
+ 
+.wrapper{
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper .material-icons{
+    top: 50%;
+    background: #fff;
+    height: 46px;
+    width: 46px;
+    line-height: 46px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.wrapper .material-icons:first-child{
+    left: -23px;
+    display: none;
+}
+.wrapper .material-icons:last-child{
+    right: -23px;
+}
+
+.wrapper .customCarousel{
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.customCarousel .dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.customCarousel .dragging img{
+    pointer-events: none;
+}
+
+.customCarousel img{
+    height: 340px;
+    object-fit: cover;
+    width: calc(100% / 3);
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .customCarousel img{
+        width: calc(100% / 2);    
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .customCarousel img{
+        width: 100%;    
+    }
+}
